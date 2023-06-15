@@ -1,13 +1,16 @@
-#include <stdio.h>
 #include <unistd.h>
+#include <sys/syscall.h>
 /**
  * main - Entry point
  *
  * Return: always 1 (success)
  */
-int main(void)
 
+int main(void)
 {
-	fput("and that piece of art is useful\" - Dora Korpar, 2015-10-19");
-	return (1);
+	const char *message = "and that piece of art is useful
+	\" - Dora Korpar, 2015-10-19\n";
+	syscall(SYS_write, 1, message, 42);
+	 return (0);
 }
+
