@@ -15,12 +15,12 @@ int main(void)
 		printf("is positive");
 	}
 
-	else if (n == 0){
+	if (n == 0){
 		printf(" %d:", rand());
 		printf("is zero");
 	}
 
-	else{
+	if (n>0){
 		printf(" %d:", rand());
 		printf("is positive");
 	}
