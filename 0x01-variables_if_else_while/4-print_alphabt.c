@@ -15,7 +15,7 @@ int main(void)
 		continue;
 	if (i == 16)
 		continue;
-	putchar( alp[i]);
+	putchar(alp[ i]);
 	}
 	return (0);
 }
