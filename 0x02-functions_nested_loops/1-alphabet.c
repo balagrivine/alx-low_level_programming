@@ -1,12 +1,12 @@
 #include "main.h"
 /**
- * main - entry point
+ * print_alphabet - entry point
  * _putchar - prints a character to the standard output
  *
  * Return: always 0 (success)
  */
 
-int main(void)
+void print_alphabet(void)
 {
 	char letter;
 
@@ -20,5 +20,4 @@ int main(void)
 	}
 
 	_putchar('\n');
-	return (0);
 }
