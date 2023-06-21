@@ -5,13 +5,13 @@
  * Return: returns 0 if successful
  */
 
-int main(void)
+void print_alphabet_x10(void)
 {
 	char letter;
 	int line_count;
 	line_count = 0;
 
-	while (line_count <= 11)
+	while (line_count <= 10)
 	{
 		for (letter = 'a'; letter <= 'z'; letter++)
 		{
@@ -21,5 +21,4 @@ int main(void)
 		_putchar('\n');
 		line_count++;
 	}
-	return (0);
 }
