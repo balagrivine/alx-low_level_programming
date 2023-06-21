@@ -9,13 +9,15 @@
 int _islower(int c)
 {
 	while (c >= 'a')
+	{
 		if (c <= 'z')
 		{
-			_putchar(97);
+			_putchar();
 			return (1);
 		}
 		if (c >= 'z')
 			return (0);
+	}
 	_putchar('\n');
 	return (0);
 
