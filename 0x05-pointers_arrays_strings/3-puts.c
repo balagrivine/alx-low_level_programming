@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _Puts - prints a string followed by qa new line t the standard output
+ * _puts - prints a string followed by qa new line t the standard output
  * @str: string t be printed
  *Return: nothing
  */
