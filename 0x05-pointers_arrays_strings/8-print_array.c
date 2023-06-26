@@ -3,7 +3,7 @@
 /**
  * print_array - prnts an array of numbers
  * @a: enter as integer
- * @b: enter as 2nd integer
+ * @n: enter as 2nd integer
  * Return: nothing
  */
 
