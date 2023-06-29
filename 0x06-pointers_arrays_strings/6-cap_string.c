@@ -8,6 +8,7 @@
 char *cap_string(char *n)
 {
 	int i;
+
 	i = 0;
 
 	while (n[i])
@@ -17,7 +18,7 @@ char *cap_string(char *n)
 			i++;
 		}
 
-		if (n[i - 1] == ' ' ||
+			if (n[i - 1] == ' ' ||
 			n[i - 1] == '\t' ||
 			n[i - 1] == '\n' ||
 			n[i - 1] == ',' ||
@@ -33,7 +34,7 @@ char *cap_string(char *n)
 			i == 0)
 				n[i] -= 32;
 
-		i++;	
+		i++;
 
 	}
 	return (n);
