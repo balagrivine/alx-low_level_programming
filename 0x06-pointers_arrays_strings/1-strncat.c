@@ -3,6 +3,7 @@
  * _strncat - appends n characters from src to dest
  * @src: copy from
  * @dest: copy to
+ * @n: number of characters to be appended to dest
  * Return: pointer to dest
  */
 
