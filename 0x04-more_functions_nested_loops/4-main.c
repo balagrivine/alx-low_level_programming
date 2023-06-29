@@ -1,12 +1,14 @@
 #include "main.h"
-
+#include <unistd.h>
 /**
- * main - check the code
+ * _putchar - writes the character c to the standard output
  *
- * Return: Always 0.
+ * Return: return 1 (success)
+ * return -1 on error
  */
-int main(void)
+
+int _putchar(char c)
 {
-	print_most_numbers();
-	return (0);
+        return (write(1, &c, 1));
+
 }

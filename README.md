@@ -1,1 +1,1 @@
-# alx-low_level_programming
+This directory contains tasks on more pointers arrays and strings

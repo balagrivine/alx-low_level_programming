@@ -1,25 +1,24 @@
 #include "main.h"
 /**
- * print_most_numbers - prints single digits of base 10 except 2 and 4
- *
- * Return: returns no value
+ * print_most_numbers - prints numbers from 0 to 9
+ * Return: nothing
  */
 
 void print_most_numbers(void)
 {
-	int num;
-
-	num = 0;
-
-	while (num <= 9)
+	int x = 0;
+	for (; x <= 9; x++)
 	{
-
-		if (num == 50)
+		if (x ==2 || x == 4)
+		
 		{
 			continue;
 		}
-		_putchar(num + '0');
-		num++;
+		else
+		{
+			_putchar(x + '0');
+		}
+
 
 	}
 	_putchar('\n');

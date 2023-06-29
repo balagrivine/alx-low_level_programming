@@ -1,1 +1,1 @@
-This directory contains more of functions and neested while loops
+s is not an empty  directiory
