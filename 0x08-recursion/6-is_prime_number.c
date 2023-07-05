@@ -3,8 +3,8 @@
 int _is_prime(int a, int b);
 
 /**
- * _is_prime_number - checks for prime number
- * @: number to be checked
+ * is_prime_number - checks for prime number
+ * @n: number to be checked
  * Return: 1 if n is an integer else return 0
  */
 
@@ -29,7 +29,7 @@ int _is_prime(int a, int b)
 		return (0);
 	}
 
-	if (a % b ==0 && b > 1)
+	if (a % b == 0 && b > 1)
 	{
 		return (0);
 	}
