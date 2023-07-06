@@ -2,7 +2,7 @@
 
 int _strlen(char *s);
 
-int _comp_char(char *s, int a, int b); 
+int _comp_char(char *s, int a, int b);
 
 /**
  * is_palindrome - checks for a palindrome string
@@ -24,7 +24,7 @@ int is_palindrome(char *s)
 }
 
 /**
- * _strlen: returns the length of a string
+ * _strlen -  returns the length of a string
  * @s:string whose length is to be checked
  * Return: length of string
  */
