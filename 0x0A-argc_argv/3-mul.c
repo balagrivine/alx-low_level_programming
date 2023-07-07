@@ -1,6 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/**
+ * main - multiplies two numbers
+ * @argc: argument count
+ * @argv: argument vector
+ * Return: always 0 (success)
+ */
+
 int main(int argc, char **argv)
 
 {
@@ -22,7 +29,7 @@ int main(int argc, char **argv)
 
 	else
 	{
-		printf("error\n");
+		printf("Error\n");
 	}
 
 	return (0);
