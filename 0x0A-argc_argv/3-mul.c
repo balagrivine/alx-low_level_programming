@@ -12,8 +12,9 @@ int main(int argc, char **argv)
 
 {
 	int a, mul = 1;
+	char msg = "Error";
 
-	if (argc > 1)
+	if (argc == 3)
 	{
 		for (a = 1; a < argc; a++)
 		{
@@ -29,7 +30,9 @@ int main(int argc, char **argv)
 
 	else
 	{
-		printf("Error\n");
+		printf("%s\n", msg);
+
+		return (1);
 	}
 
 	return (0);
