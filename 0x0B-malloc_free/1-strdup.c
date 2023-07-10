@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**_strdup - returns a pointer to a new string which is a duplicate of str
- * @str: string to be duplicated
+ * @strdup: string to be duplicated
  * Return: pointer to the duplicate string else
  * return NULL for insufficient memory
  */
@@ -14,7 +14,7 @@ char *_strdup(char *str)
 	int i;
 
 	int a;
-	
+
 	char *arr;
 
 	i = 48;
@@ -24,7 +24,7 @@ char *_strdup(char *str)
 		return (NULL);
 	}
 
-	arr = malloc((sizeof(char) * i) + 1);
+	arr = malloc((sizeof(char) * i) + i);
 
 	if (arr == NULL)
 	{
