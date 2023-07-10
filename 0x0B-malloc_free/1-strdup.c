@@ -17,7 +17,7 @@ char *_strdup(char *str)
 	
 	char *arr;
 
-	i = 6;
+	i = 48;
 
 	if (str == NULL)
 	{
