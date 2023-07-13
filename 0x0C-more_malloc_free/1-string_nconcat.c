@@ -1,6 +1,5 @@
 #include "main.h"
 #include <stdlib.h>
-
 /**
  * string_nconcat - concatenates two strings
  * @s1: string 1
@@ -8,7 +7,6 @@
  * @n: the first n bytes from string 2
  * Return: pointer to newly allocated spaace in memory
  */
-
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	unsigned int i = 0, j = 0, k = 0, l = 0;
@@ -52,8 +50,4 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	arr[j] = '\0';
 	return (arr);
-
-
-
-
 }
