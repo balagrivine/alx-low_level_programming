@@ -3,14 +3,13 @@
 
 /**
  * free_dog - frees the memory allocated to dog
- * @dog_t: typedef
  * @d: pointer to struct
  * Return: void
  */
 
 void free_dog(dog_t *d)
 {
-	if(d)
+	if (d)
 	{
 		free(d->name);
 		free(d->owner);
