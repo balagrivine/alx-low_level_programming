@@ -5,7 +5,8 @@
  * @array: array ofmintegers to be looped over
  * @size: sizeof the array
  * @cmp: pointer to function to be used to compare values
- * Return: index of the first element for which the cmp function does not rturn 0
+ * Return: index of the first element for 
+ * which the cmp function does not rturn 0
  * return -1 if functions fail and if size<=0
  */
 
