@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <string.h>
+#include "3-calc.h"
+#include <stdlib.h>
+
+/**
+ * get_op_func - selets th correct functio to perform the operation asked by the user
+ * @s: opperator passed as argument to the program
+ * Return: pointer to the function that corresponds to the operator given as parameter
+ */
+
+int (*get_op_func(char *s))(int, int)	
+{
+	op_t ops[] = {
+	{"+", op_add},
+	{"-", op_sub},
+        {"*", op_mul},
+	{"/", op_div},
+	{"%", op_mod},
+	{NULL, NULL}
+	};
+
+	int i;
+
+	while (i < 5)
+	{
+		if (strcmp(s, ops[i].op) == 0)
+		{
+			return (ops[i].f);
+		}	
+
+		i++;
+	}
+	return (0);
+}
