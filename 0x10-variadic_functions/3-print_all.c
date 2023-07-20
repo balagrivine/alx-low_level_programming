@@ -3,8 +3,7 @@
 #include "variadic_functions.h"
 
 /**
- * void print_all(const char * const format, ...)
- * @char: char to print
+ * print_all - prints anything passed to itt
  * @format: list of types of argumens pasxed to the function
  *
  * Return: nothing
@@ -23,7 +22,7 @@ void print_all(const char * const format, ...)
 	{
 		while (format[i])
 		{
-			switch(format[i])
+			switch (format[i])
 			{
 				case 'c':
 					printf("%s%c", sep, va_arg(list, int));
