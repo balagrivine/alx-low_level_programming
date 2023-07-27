@@ -3,7 +3,7 @@
 
 
 /**
- * first - writes first to the console before the main function runs
+ * custom_init - custom initialization function
  *
  * Return: void
  */
