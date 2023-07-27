@@ -1,14 +1,14 @@
 #include <stdio.h>
 
-
+void first(void) __attribute__((constructor));
 
 /**
- * custom_init - custom initialization function
+ * first - custom initialization function
  *
  * Return: void
  */
 
-void custom_init(void)
+void first(void)
 {
 	printf("You're beat! and yet, you must allow,\n");
 	printf("I bore my house upon my back!\n");
