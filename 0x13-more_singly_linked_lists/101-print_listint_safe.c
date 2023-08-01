@@ -11,6 +11,7 @@ size_t print_listint_safe(const listint_t *head)
 {
 	const listint_t *temp, *temp2;
 	size_t num_nodes = 0;
+	int j = 1;
 
 	if (head == NULL || head->next == NULL)
 	{
@@ -19,35 +20,31 @@ size_t print_listint_safe(const listint_t *head)
 
 	temp = head;
 	temp2 = head;
-	while (temp2 && temp2->next)
+	while (temp && temp->next)
 	{
 		printf("[%p] %d\n", ((void *) temp), temp->n);
+		num_nodes++;
 		temp = temp->next;
-		temp2 = (temp2->next)->next;
 
-		if (temp == temp2)
+		if (temp == temp2 && j)
 		{
-			printf("[%p] %d\n", ((void *) temp), temp->n);
-			num_nodes = 1;
-			temp2 = temp2->next;
-			while (temp != temp2)
+			j = 0;
+			num_nodes = 0;
+			/*intf("[%p] %d\n", ((void *) temp), temp->n);
+			temp2 = temp2->next;*/
+			/*while (temp != temp2)
 			{
-				/*printf("[%p] %d\n", ((void *) temp), temp->n);*/
 				printf("[%p] %d\n", ((void *) temp2), temp2->n);
 				temp2 = temp2->next;
 				num_nodes++;
 			}
-			/*temp = temp->next;*/
-			while (temp != temp2)
+
+			return (num_nodes);*/
+			while (head == temp2)
 			{
-				/*printf("%d\n", temp->n);
-				printf("%d\n", temp2->n);*/
-				printf("[%p] %d\n", ((void *) temp), temp->n);
-				temp = temp->next;
+				head = head->next;
 				num_nodes++;
 			}
-
-			return (num_nodes);
 		}
 	}
 	return (num_nodes);
