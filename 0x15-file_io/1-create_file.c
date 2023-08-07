@@ -32,7 +32,7 @@ int create_file(const char *filename, char *text_content)
 	{
 		file = open(filename, O_CREAT || O_RDWR);
 	}
-	
+
 	file = open(filename, O_CREAT | O_RDWR | O_TRUNC);
 
 	wrte = write(file, text_content, count);
@@ -44,5 +44,5 @@ int create_file(const char *filename, char *text_content)
 
 	close(file);
 	return (1);
-	
+
 }
