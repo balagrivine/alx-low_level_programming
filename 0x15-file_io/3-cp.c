@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
 			free(buffer);
 			exit(98);
 		}
-		wrte = write(dest,buffer, 1024);
+		wrte = write(dest, buffer, 1024);
 		if (dest == -1 || wrte == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
