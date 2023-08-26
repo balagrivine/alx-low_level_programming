@@ -244,7 +244,7 @@ void _close(int fd)
 	}
 }
 /**
- * main - entry point into the function
+ * main - entry point
  * @argc: argument count
  * @argv: argument vector
  *
