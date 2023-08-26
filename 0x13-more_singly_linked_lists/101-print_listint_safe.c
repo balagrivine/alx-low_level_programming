@@ -34,7 +34,7 @@ size_t print_listint_safe(const listint_t *head)
 }
 /**
  * ct_node - counts the number of nodes in a circular list
- * @head: pointer pointing to the first node
+ * @first: pointer pointing to the first node
  * Return: returns the number of nodes
  */
 size_t ct_node(const listint_t *first)
