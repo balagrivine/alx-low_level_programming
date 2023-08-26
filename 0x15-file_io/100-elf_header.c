@@ -251,7 +251,7 @@ void _close(int fd)
  * Return: 0 on success
  * Description: exit with the code 98 if not elf file
  */
-int main (int argc, char*argv[])
+int main(int argc, char *argv[])
 {
 	Elf64_Ehdr *hdr;
 	int op, rd;
