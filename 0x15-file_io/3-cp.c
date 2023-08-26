@@ -1,10 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <fcntl.h>
-#include <unistd.h>
-#include <string.h>
-#include <errno.h>
-
+#include "main.h"
 /**
  * close_file - closes file descriptor
  * @file: the file descriptor to be closed
@@ -24,13 +18,11 @@ void close_file(int file)
  * main - copies the content of a file to another
  * @argc: the number of arguments
  * @argv: an array of pointers to the arguments passed to the program
- *
  * Return: 0 on success, 97 on incorrect arguments,
  * 98 on read error, 99 on write error, 100 on close error
  */
 int main(int argc, char *argv[])
 {
-
 	int src, dest;
 	char buffer[1024];
 	ssize_t btread;
@@ -41,14 +33,12 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		return (97);
 	}
-
 	src = open(argv[1], O_RDONLY);
 	if (src == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		return (98);
 	}
-
 	dest = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	if (dest == -1)
 	{
@@ -56,7 +46,6 @@ int main(int argc, char *argv[])
 		close_file(src);
 		return (99);
 	}
-
 	while ((btread = read(src, buffer, sizeof(buffer))) > 0)
 	{
 		written = write(dest, buffer, btread);
@@ -68,19 +57,16 @@ int main(int argc, char *argv[])
 			return (99);
 		}
 	}
-
 	if (btread == -1)
 	{
-		dprintf(STDERR_FILENO, "An error occurred while reading from %s: %s\n",
+		dprintf(STDERR_FILENO, "Can't read from file %s %s\n",
 			argv[1], strerror(errno));
 		close_file(src);
 		close_file(dest);
 		return (98);
 	}
-
 	close_file(src);
 	close_file(dest);
-
 	return (0);
 }
 
