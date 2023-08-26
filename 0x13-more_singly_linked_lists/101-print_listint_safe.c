@@ -2,7 +2,7 @@
 #include <stdio.h>
 /**
  * print_listint_safe - counts the number of nodes in a circular list
- * @head: pointer pointing to the first node
+ * @head :pointer pointing to the first node
  * Return: returns the number of nodes and 0 otherwise
  */
 size_t ct_node(const listint_t *head);
@@ -15,7 +15,7 @@ size_t print_listint_safe(const listint_t *head)
 	{
 		while (head)
 		{
-			printf("[%p] %d\n", (void *)head->next, head->n);
+			printf("[%p] %d\n", (void *)head, head->n);
 			head = head->next;
 			length++;
 		}
@@ -24,13 +24,13 @@ size_t print_listint_safe(const listint_t *head)
 	{
 		while (index < length)
 		{
-			printf("[%p] %d\n", (void *)head->next, head->n);
+			printf("[%p] %d\n", (void *)head, head->n);
 			head = head->next;
 			index++;
 		}
-		printf("-> [%p] %d", (void *)head, head->n);
+		printf("-> [%p] %d\n", (void *)head, head->n);
 	}
-	return (index);
+	return (length);
 }
 /**
  * ct_node - counts the number of nodes in a circular list
@@ -44,7 +44,7 @@ size_t ct_node(const listint_t *first)
 
 	nxt = first->next->next;
 	prev = first->next;
-	if (first != NULL || first->next != NULL)
+	if (first == NULL || first->next == NULL)
 		return (0);
 	while (nxt)
 	{
