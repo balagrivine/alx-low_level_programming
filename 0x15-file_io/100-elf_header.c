@@ -5,20 +5,12 @@
 #include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
+
 /**
-*typedef struct elf_st
-*{
-*	unsigned char e_ident[16];
-*	uint16_t e_type;
-*	uint16_t e_machine;
-*	uint32_t e_version;
-*	uint64_t e_entry;
-*} Elf64_Ehdr;
-*/
-/**
- *main - entry point in  c
+ * main - entry point into the function
  * @argc: argument count
  * @argv: argument vector
+ * Description: anything
  * Return: returns 0 on success
  */
 int main(int argc, char **argv)
