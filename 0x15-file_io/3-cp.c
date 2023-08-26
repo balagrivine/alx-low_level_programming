@@ -1,6 +1,8 @@
 #include "main.h"
+#include <errno.h>
+#include <stdlib.h>
 /**
- * close_file - closes file descriptor
+ * close_file - closes descriptor
  * @file: the file descriptor to be closed
  *
  * Return: void
@@ -59,8 +61,8 @@ int main(int argc, char *argv[])
 	}
 	if (btread == -1)
 	{
-		dprintf(STDERR_FILENO, "Can't read from file %s %s\n",
-			argv[1], strerror(errno));
+		dprintf(STDERR_FILENO, "Can't read from file %s\n",
+			argv[1]);
 		close_file(src);
 		close_file(dest);
 		return (98);
