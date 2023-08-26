@@ -47,7 +47,7 @@ void elf(unsigned char *e_ident)
 void magic(unsigned char *e_ident)
 {
 	int i;
-	char *str = "Magic: ";
+	char *str = " Magic: ";
 
 	printf("%s", str);
 
@@ -70,7 +70,7 @@ void magic(unsigned char *e_ident)
  */
 void class(unsigned char *e_ident)
 {
-	char *msg = "Class: ";
+	char *msg = " Class: ";
 
 	printf("%s", msg);
 
@@ -95,7 +95,7 @@ void class(unsigned char *e_ident)
  */
 void data(unsigned char *e_ident)
 {
-	printf("Data: ");
+	printf(" Data: ");
 	switch (e_ident[EI_DATA])
 	{
 		case ELFDATANONE:
@@ -117,7 +117,7 @@ void data(unsigned char *e_ident)
  */
 void version(unsigned char *e_ident)
 {
-	printf("Version: %d", e_ident[EI_VERSION]);
+	printf(" Version: %d", e_ident[EI_VERSION]);
 	switch (e_ident[EI_VERSION])
 	{
 		case EV_CURRENT:
@@ -134,7 +134,7 @@ void version(unsigned char *e_ident)
  */
 void osabi(unsigned char *e_ident)
 {
-	printf("OS/ABI: ");
+	printf(" OS/ABI: ");
 	switch (e_ident[EI_OSABI])
 	{
 		case ELFOSABI_NONE:
