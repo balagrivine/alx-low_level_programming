@@ -61,7 +61,7 @@ int main(int argc, char *argv[])
 	}
 	if (btread == -1)
 	{
-		dprintf(STDERR_FILENO, "Can't read from file %s\n",
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n",
 			argv[1]);
 		close_file(src);
 		close_file(dest);
