@@ -177,7 +177,7 @@ void abi(unsigned char *e_ident)
 /**
  * type - prints type
  * @e_type: type
- * @e_ident: pointer to an array
+ * @e_ident: pointer to array
  */
 void type(unsigned int e_type, unsigned char *e_ident)
 {
