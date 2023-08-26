@@ -1,51 +1,72 @@
 #include "lists.h"
 #include <stdio.h>
 /**
- * print_listint_safe - prints a listint_t linked list
- * @pointer to pointer to the first node of the list
- *
- * Return: number of nodes in the list
+ * print_listint_safe - counts the number of nodes in a circular list
+ * @head: pointer pointing to the first node
+ * Return: returns the number of nodes and 0 otherwise
  */
+size_t ct_node(const listint_t *head);
 
 size_t print_listint_safe(const listint_t *head)
 {
-	const listint_t *temp, *temp2;
-	size_t num_nodes = 0;
-	int j = 1;
+	size_t length = ct_node(head), index = 0;
 
-	if (head == NULL || head->next == NULL)
+	if (length == 0)
 	{
-		exit(98);
-	}
-
-	temp = head;
-	temp2 = head;
-	while (temp && temp->next)
-	{
-		printf("[%p] %d\n", ((void *) temp), temp->n);
-		num_nodes++;
-		temp = temp->next;
-
-		if (temp == temp2 && j)
+		while (head)
 		{
-			j = 0;
-			num_nodes = 0;
-			/*intf("[%p] %d\n", ((void *) temp), temp->n);
-			temp2 = temp2->next;*/
-			/*while (temp != temp2)
-			{
-				printf("[%p] %d\n", ((void *) temp2), temp2->n);
-				temp2 = temp2->next;
-				num_nodes++;
-			}
-
-			return (num_nodes);*/
-			while (head == temp2)
-			{
-				head = head->next;
-				num_nodes++;
-			}
+			printf("[%p] %d\n", (void *)head->next, head->n);
+			head = head->next;
+			length++;
 		}
 	}
-	return (num_nodes);
+	else
+	{
+		while (index < length)
+		{
+			printf("[%p] %d\n", (void *)head->next, head->n);
+			head = head->next;
+			index++;
+		}
+		printf("-> [%p] %d", (void *)head, head->n);
+	}
+	return (index);
+}
+/**
+ * ct_node - counts the number of nodes in a circular list
+ * @head: pointer pointing to the first node
+ * Return: returns the number of nodes
+ */
+size_t ct_node(const listint_t *first)
+{
+	const listint_t *prev, *nxt;
+	size_t count = 1;
+
+	nxt = first->next->next;
+	prev = first->next;
+	if (first != NULL || first->next != NULL)
+		return (0);
+	while (nxt)
+	{
+		if (prev == nxt)
+		{
+			prev = first;
+			while (prev != nxt)
+			{
+				prev = prev->next;
+				nxt = nxt->next;
+				count++;
+			}
+			prev = prev->next;
+			while (prev != nxt)
+			{
+				prev = prev->next;
+				count++;
+			}
+			return (count);
+		}
+		prev = prev->next;
+		nxt = nxt->next->next;
+	}
+	return (count);
 }
