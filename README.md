@@ -1,0 +1,1 @@
+In this round of my ALX journey, I embarked on the concept osdoubly linked lists after tackling singly linked lists. DLL are dynamic data structures in which the node has 2 pointers, 1 points to the next node and the other points to the previous node. DLLs can be traversed in both foward and backward directions but extra memory is requered because of the 2 pointers in place.
