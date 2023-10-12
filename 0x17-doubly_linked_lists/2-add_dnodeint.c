@@ -6,7 +6,7 @@
  * add_dnodeint - adds a new node at the beginning of the list
  * @head: double pointer to the head of the poinetr
  * @n: dat element to eb added
- * Retunr: address of the new node
+ * Return: address of the new node
  */
 
 dlistint_t *add_dnodeint(dlistint_t **head, const int n)
@@ -25,7 +25,7 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 
 	if (*head)
 	{
-		(*head)->prev = new_node;;
+		(*head)->prev = new_node;
 	}
 	*head = new_node;
 
