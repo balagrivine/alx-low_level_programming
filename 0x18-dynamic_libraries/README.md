@@ -1,0 +1,1 @@
+In this round of ALX journey, I delved into the series of dynamic libraries where I learnt how to create dynmic libraries and use  them in the linkinng process. I also learnt the differences between static and dynamic libraries in terms of memory usage as well as speed.
