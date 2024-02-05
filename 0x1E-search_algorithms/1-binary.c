@@ -14,12 +14,12 @@ int binary_search(int *array, size_t size, int value)
 	size_t mid;
 	int low, high;
 
+	if(array == NULL)
+		return -1;
 	low = 0;
 	high = size -1;
 	if(high >= low)
 	{
-		if (array == NULL)
-			return -1;
 		mid = size / 2;
 		if(array[mid] == value)
 			return mid;
