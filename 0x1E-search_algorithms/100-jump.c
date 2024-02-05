@@ -20,8 +20,8 @@ int jump_search(int *array, size_t size, int value)
 {
 	int step = sqrt(size);
 
-	int prev = 0;
-	while (arr[min(step, size) - 1] < value)
+	size_t prev = 0;
+	while (array[min(step, size) - 1] < value)
 	{
 		prev = step;
 		step++;
