@@ -9,7 +9,7 @@
  * Return: -1 if value is absent or array is NULL else return value
  */
 
-int min(size_t a, size_t b)
+size_t min(size_t a, size_t b)
 {
 	if (b > a)
 		return a;
@@ -19,25 +19,30 @@ int min(size_t a, size_t b)
 int jump_search(int *array, size_t size, int value)
 {
 	size_t step = sqrt(size);
-
 	size_t prev = 0;
+
+	if (array == NULL || size == 0)
+		return -1;
+
 	while (array[min(step, size) - 1] < value)
 	{
 		prev = step;
-		printf("Value checked array[%ld] = [%d]\n", prev, array[prev]);
 		step++;
 		if (prev >= size)
 			return -1;
+		printf("Value checked array[%ld] = [%d]\n", prev, array[prev]);
 	}
+	printf("Value checked array[%ld] = [%d]\n", prev, array[prev]);
+	printf("Value found between indexes [%lu] and [%lu]\n", prev, step);
+
 	while (array[prev] < value)
 	{
 		prev++;
 		printf("Value checked array[%ld] = [%d]\n", prev, array[prev]);
-
-		if ((int)prev == min(step, size))
+		if (prev == min(step, size))
 			return -1;
 	}
 	if (array[prev] == value)
-		return (int)prev;
+		return prev;
 	return -1;
 }
