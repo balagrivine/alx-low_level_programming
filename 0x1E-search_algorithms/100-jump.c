@@ -9,7 +9,7 @@
  * Return: -1 if value is absent or array is NULL else return value
  */
 
-int min(int a, int b)
+int min(size_t a, size_t b)
 {
 	if (b > a)
 		return a;
@@ -18,7 +18,7 @@ int min(int a, int b)
 }
 int jump_search(int *array, size_t size, int value)
 {
-	int step = sqrt(size);
+	size_t step = sqrt(size);
 
 	size_t prev = 0;
 	while (array[min(step, size) - 1] < value)
