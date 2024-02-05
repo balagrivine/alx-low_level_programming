@@ -32,10 +32,10 @@ int jump_search(int *array, size_t size, int value)
 	{
 		prev++;
 
-		if (prev == min(step, size))
+		if ((int)prev == min(step, size))
 			return -1;
 	}
 	if (array[prev] == value)
-		return prev;
+		return (int)prev;
 	return -1;
 }
