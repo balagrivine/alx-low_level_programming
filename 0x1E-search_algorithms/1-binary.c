@@ -18,7 +18,7 @@ int binary_search(int *array, size_t size, int value)
 		return -1;
 	low = 0;
 	high = size -1;
-	if(high >= low)
+	if(low <= high)
 	{
 		mid = size / 2;
 		if(array[mid] == value)
@@ -26,7 +26,7 @@ int binary_search(int *array, size_t size, int value)
 		if(array[mid] > value)
 			return binary_search(array, mid - 1, value);
 		else
-		return binary_search(array, mid + 1, value);
+			return binary_search(array, mid + 1, value);
 	}
 	return -1;
 }
