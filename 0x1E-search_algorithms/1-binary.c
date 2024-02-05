@@ -10,4 +10,22 @@
  */
 
 int binary_search(int *array, size_t size, int value)
+{
+	size_t i, mid;
+	int low, high;
 
+	low = array[0];
+	high = array[size -1]
+	if(high >= low)
+	{
+		if (array == NULL)
+			return -1;
+		mid = size / 2;
+		if(array[mid] == value)
+			return mid;
+		if(array[mid] > value)
+			return binary_search(array, mid - 1, value);
+		return binary_search(array, mid + 1, value)
+	}
+	return -1;
+}
