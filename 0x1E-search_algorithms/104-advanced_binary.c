@@ -12,8 +12,27 @@
 
 int advanced_binary(int *array, size_t size, int value)
 {
-	size_t low, high;
+	size_t low, high, mid, i;
 
 	if (array == NULL)
 		return -1;
+
+	low = 0;
+	high = size - 1;
+	if (low <= high)
+	{
+		mid = low + (high - low) / 2;
+		printf("Searching in array: ");
+		for (i = 0; i < high; i++)
+			printf("%ld, ", i);
+		printf("%d\n");
+		if (array[mid] == value)
+			return mid;
+		if (array[mid] < value)
+			advanced_binary(array, mid + 1, value);
+		else
+			advanced_binary(array, mid - 1, value);
+	}
+
+	return -1;
 }
