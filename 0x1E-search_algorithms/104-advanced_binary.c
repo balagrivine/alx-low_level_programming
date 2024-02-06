@@ -25,7 +25,7 @@ int advanced_binary(int *array, size_t size, int value)
 		printf("Searching in array: ");
 		for (i = 0; i < high; i++)
 			printf("%ld, ", i);
-		printf("%d\n", i);
+		printf("%ld\n", i);
 		if (array[mid] == value)
 			return mid;
 		if (array[mid] < value)
