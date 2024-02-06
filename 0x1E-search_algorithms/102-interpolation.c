@@ -34,6 +34,7 @@ int interpolation_search(int *array, size_t size, int value)
 			high = pos - 1;
 		i++;
 	}
+	printf("Value checked array[%lu] = [%d]", i, array[i]);
 	return -1;
 
 }
