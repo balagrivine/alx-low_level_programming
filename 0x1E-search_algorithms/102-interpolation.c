@@ -25,14 +25,13 @@ int interpolation_search(int *array, size_t size, int value)
 	{
 		if (array[pos] == value)
 		{
-			return value;
+			return pos;
 		}
 
 		if (array[pos] < value)
 			low = pos + 1;
 		else
 			high = pos - 1;
-		i++;
 	}
 	return -1;
 
