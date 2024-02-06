@@ -12,17 +12,19 @@
 
 int exponential_search(int *array, size_t size, int value)
 {
-	int low, high, pos;
+	int low, high, pos, i;
 
 	low = 0;
+	i = 0;
 	high = size - 1;
 	pos = low + (value - array[low])*(high - low)/(array[high] - array[low]);
 
 	if (array == NULL)
 		return -1;
 
-	while (low <= high && value >= array[low] && value <= array[high])
+	while (i <= size - 1 && low <= high && value >= array[low] && value <= array[high])
 	{
+		printf("Value checked array[%d] = [%d]", i, array[i]);
 		if (array[pos] == value)
 		{
 			return value;
@@ -32,6 +34,7 @@ int exponential_search(int *array, size_t size, int value)
 			low = pos + 1;
 		else
 			high = pos - 1;
+		i++;
 	}
 	return -1;
 
