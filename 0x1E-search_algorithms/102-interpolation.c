@@ -23,7 +23,7 @@ int interpolation_search(int *array, size_t size, int value)
 	if (array == NULL)
 		return -1;
 
-	while (i <= size - 1 && low <= high && value >= array[low] && value <= array[high])
+	while (i <= size && low <= high && value >= array[low] && value <= array[high])
 	{
 		if (array[pos] == value)
 		{
