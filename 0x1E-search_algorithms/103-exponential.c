@@ -41,7 +41,7 @@ int _binary_search(int *array, size_t low, size_t high, int value)
 /**                                                                                 * exponential_search - searches for a                                              * value in a sorted array using exponential search                                 * @array: pointer to the first element of the array to search                      * @value: value to search                                                          * @size: number of elements in the list                                            * Return: -1 if element is absent of arrat is NULL                                 * else return value                                                                */
 int exponential_search(int *array, size_t size, int value)
 {
-	size_t i, low, high, mid;
+	size_t i, low, high;
 
 	if (array == NULL)
 		return -1;
