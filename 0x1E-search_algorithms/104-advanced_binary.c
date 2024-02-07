@@ -13,13 +13,11 @@
 
 int advanced_binary_search(int *array, size_t low, size_t high, int value)
 {
-	size_t i;
+	size_t i, mid;
 
 	if (array == NULL)
 		return -1;
 
-	low = 0;
-	high = size - 1;
 	if (high >= low)
 	{
 		mid = low + (high - low) / 2;
