@@ -28,7 +28,7 @@ int advanced_binary_search(int *array, size_t low, size_t high, int value)
 	
 		if (array[mid] == value)
 			return mid;
-		if (array[mid] < value)
+		if (array[mid] <= value)
 			return advanced_binary_search(array, low, mid - 1, value);
 		return advanced_binary_search(array, mid + 1, high, value);
 	}
