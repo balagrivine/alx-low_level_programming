@@ -8,7 +8,7 @@ size_t min(size_t a, size_t b)
 		return b;
 }
 
-/**                                                                                 * binary_search - function to search for a                                         * value ina  sorted rray of integers using binary search algorithm                 * @array: pointer to an array of integers                                          * @size: numbe rof elements in the array                                           * @value: value to be searched                                                     * Return: value or -1 if value is not in the array                                 */
+/**                                                                                 * _binary_search - function to search for a                                         * value ina  sorted rray of integers using binary search algorithm                 * @low: pointer to an array of integers                                          * @high: numbe rof elements in the array                                           * @value: value to be searched                                                     * Return: value or -1 if value is not in the array                                 */
 
 int _binary_search(int *array, size_t low, size_t high, int value)
 {
@@ -38,7 +38,7 @@ int _binary_search(int *array, size_t low, size_t high, int value)
 	return -1;
 }
 
-/**                                                                                 * exponential_search - searches for a                                              * value in a sorted array using exponential search                                 * @array: pointer to the first element of the array to search                      * @value: value to search                                                          * @size: number of elements in the list                                            * Return: -1 if element is absent of arrat is NULL                                 * else return value                                                                */
+/**                                                                                 * exponential_search - searches for a                                              * @value in a sorted array using exponential search                                 * @array: pointer to the first element of the array to search                      * @value: value to search                                                          * @size: number of elements in the list                                            * Return: -1 if element is absent of arrat is NULL                                 * else return value                                                                */
 int exponential_search(int *array, size_t size, int value)
 {
 	size_t i, low, high;
