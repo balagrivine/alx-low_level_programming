@@ -13,7 +13,7 @@
 
 int advanced_binary_search(int *array, size_t low, size_t high, int value)
 {
-	size_t low, high, mid, i;
+	size_t i;
 
 	if (array == NULL)
 		return -1;
@@ -30,26 +30,26 @@ int advanced_binary_search(int *array, size_t low, size_t high, int value)
 		if (array[mid] == value)
 			return mid;
 		if (array[mid] < value)
-			advanced_binary(array, mid + 1, high, value);
+			advanced_binary_search(array, mid + 1, high, value);
 		else
-			advanced_binary(array, low, mid - 1, value);
+			advanced_binary_search(array, low, mid - 1, value);
 	}
 
 	return -1;
 }
 
 /**
- *  * advanced_binary - searches a value in a sorted array of intergers
- *   * @array: pointer to the first element of the array
- *    * @size: number of elements in array
- *     * @value: value to search for
- *      * Return: -1 || value
- *       */
+ * advanced_binary - searches a value in a sorted array of intergers
+ * @array: pointer to the first element of the array
+ * @size: number of elements in array
+ * @value: value to search for
+ * Return: -1 || value
+ */
 
 int advanced_binary(int *array, size_t size, int value)
 {
 	if (array == NULL || size == 0)
 		return (-1);
 
-	return (advanced_binary_recursive(array, 0, size - 1, value));
+	return (advanced_binary_search(array, 0, size - 1, value));
 }
