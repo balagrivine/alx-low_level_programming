@@ -2,7 +2,7 @@
 #include <math.h>
 
 /**
- * exponential_search - a function that searches for 
+ * interpolation_search - a function that searches for 
  * a value in a sorted array
  * @array: pointer to the first elemet of the array
  * @size: number of elements of the array
